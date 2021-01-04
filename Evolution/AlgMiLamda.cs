@@ -22,8 +22,8 @@ namespace Evolution
             PrintObjectiveValues(_population);
             for (int i = 0; i < 10; i++) // just repeat some more times
             {
-                double fitValue = Double.MaxValue;
-                while (_population[0].fitness < fitValue)
+                double fitValue = Double.MinValue;
+                while (_population[0].fitness > fitValue)
                 {
                     var bestPop = CreateChildPopulation(_population);
                     fitValue = bestPop[0].fitness;
