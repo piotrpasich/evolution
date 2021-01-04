@@ -1,0 +1,7 @@
+C:\Users\papi\Desktop\MSI\Evolution\Evolution\bin\Debug\Evolution.exe.config
+C:\Users\papi\Desktop\MSI\Evolution\Evolution\bin\Debug\Evolution.exe
+C:\Users\papi\Desktop\MSI\Evolution\Evolution\bin\Debug\Evolution.pdb
+C:\Users\papi\Desktop\MSI\Evolution\Evolution\obj\Debug\Evolution.csprojAssemblyReference.cache
+C:\Users\papi\Desktop\MSI\Evolution\Evolution\obj\Debug\Evolution.csproj.CoreCompileInputs.cache
+C:\Users\papi\Desktop\MSI\Evolution\Evolution\obj\Debug\Evolution.exe
+C:\Users\papi\Desktop\MSI\Evolution\Evolution\obj\Debug\Evolution.pdb
