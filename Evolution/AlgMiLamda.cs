@@ -18,8 +18,8 @@ namespace Evolution {
             PrintObjectiveValues(_population);
             for (int i = 0; i < 10; i++) // just repeat some more times
             {
-                double fitValue = Double.MaxValue;
-                while (_population[0].fitness < fitValue) {
+                double fitValue = Double.MinValue;
+                while (_population[0].fitness > fitValue) {
                     var bestPop = CreateChildPopulation(_population);
                     Console.WriteLine(string.Join(", ", bestPop));
                     fitValue = bestPop[bestPop.Count - 1].fitness;
@@ -36,12 +36,12 @@ namespace Evolution {
             List<Chromosom> allPopulation = new List<Chromosom>(Program.PopSize + Program.NumChildren);
             allPopulation.AddRange(population);
             allPopulation.AddRange(bestPop);
-            return allPopulation.OrderBy(x => x.fitness).Take(Program.PopSize).ToList();
+            return allPopulation.OrderByDescending(x => x.fitness).Take(Program.PopSize).ToList();
         }
 
         private List<Chromosom> CreateChildPopulation(List<Chromosom> population) {
             List<Chromosom> bestPopChild = new List<Chromosom>(Program.NumChildren); // minimalization
-            var bestPop = population.OrderBy(x => x.fitness).Take(Program.NumChildren).ToList<Chromosom>();
+            var bestPop = population.OrderByDescending(x => x.fitness).Take(Program.NumChildren).ToList<Chromosom>();
             foreach (var item in bestPop) {
                 bestPopChild.Add(new Chromosom(item));
             }
