@@ -23,7 +23,7 @@ namespace Evolution
             for (int i = 0; i < 20; i++) // just repeat some more times
             {
                 var bestPop = CreateChildPopulation(_population);
-                double fitValue = bestPop[bestPop.Count - 1].fitness;
+                double fitValue = bestPop[0].fitness;
                 PrintObjectiveValues(bestPop);
                 Mutate(bestPop);
                 EvaluateObjective(bestPop);
