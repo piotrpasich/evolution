@@ -20,19 +20,15 @@ namespace Evolution
         {
             InitPopulation();
             PrintObjectiveValues(_population);
-            for (int i = 0; i < 10; i++) // just repeat some more times
+            for (int i = 0; i < 20; i++) // just repeat some more times
             {
-                double fitValue = Double.MaxValue;
-                while (_population[0].fitness < fitValue)
-                {
-                    var bestPop = CreateChildPopulation(_population);
-                    fitValue = bestPop[0].fitness;
-                    PrintObjectiveValues(bestPop);
-                    Mutate(bestPop);
-                    EvaluateObjective(bestPop);
-                    _population = CreatePopulation(_population, bestPop);
-                    Console.WriteLine("Pop {0}, FitVal {1}", _population[0].fitness, fitValue);
-                }
+                var bestPop = CreateChildPopulation(_population);
+                double fitValue = bestPop[0].fitness;
+                PrintObjectiveValues(bestPop);
+                Mutate(bestPop);
+                EvaluateObjective(bestPop);
+                _population = CreatePopulation(_population, bestPop);
+                Console.WriteLine("Pop {0}, FitVal {1}\n", _population[0].fitness, fitValue);
             }
         }
 

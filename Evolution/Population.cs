@@ -76,7 +76,7 @@ namespace Evolution
 
         internal void CalculateFitness()
         {
-            double y = gens[0] * gens[0] + gens[1] * gens[1];
+            double y = 0;
             fitness = y;
         }
 
