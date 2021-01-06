@@ -76,8 +76,11 @@ namespace Evolution
 
         internal void CalculateFitness()
         {
-            double y = 0;
-            fitness = y;
+            int indexNumber = 36296;
+            int h = (5 + indexNumber) % 15;
+            double x = gens[0];
+            double y = gens[1];
+            fitness = Math.Sin(Math.Sqrt(Math.Pow(x,2) + Math.Pow(y, 2) + h) / Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2));
         }
 
         public override string ToString()
